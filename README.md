@@ -2,6 +2,7 @@
 
 Web Scraping Projects
  - The following are our web scraping project ideas. They are of different industries so that you can choose one according to your interests and expertise. 
+ - Scrape 5 words on a website every 30 minutes and publish those on a Slack channel.
 
 
 1. How to work on this project
