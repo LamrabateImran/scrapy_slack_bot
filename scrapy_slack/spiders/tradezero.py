@@ -9,7 +9,6 @@ class TradezeroSpider(scrapy.Spider):
 
     def parse(self, response):
         words = response.css('.anchor::text').extract()
-        #send slack message
         def listToString(s): 
             # initialize an empty string
             str1 = " " 
@@ -20,6 +19,7 @@ class TradezeroSpider(scrapy.Spider):
         #write cmd command 
         cmd = """curl -X POST -H 'Content-type: application/json' --data \"{0}\" https://hooks.slack.com/services/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"""
         sf = cmd.format(payload)
+        #send message to #alert chanel on slack 
         os.system(sf)
         scraped_info = {
                             'Words' : words,
